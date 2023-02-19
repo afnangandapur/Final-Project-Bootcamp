@@ -1,0 +1,19 @@
+Create database ChatDb;
+use ChatDb;
+Create table Inbox(
+InboxID int primary key identity(1,1),
+MemberID int,
+AdminID int,
+Deleted bit,
+Email varchar(200),
+CreatedDate Datetime
+)
+Create table Inbox_Chats(
+ChatsID int primary key identity(1,1),
+InboxID int,
+SentBy varchar(50),
+Message varchar(Max),
+CreatedDate Datetime
+)
+select * from Inbox;
+select * from Inbox_Chats;
